@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1eee5">
+  <title>AstroHealth · Controle de missão</title>
+  <meta name="description" content="Computador central AstroHealth. Demonstração interativa de exercício, recuperação e telemetria sintética em órbita.">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#view">Pular para o painel</a>
+  <div class="shell">
+    <aside class="rail" id="rail">
+      <a href="#overview" class="brand">
+        <span class="brand-symbol" aria-hidden="true"><i></i></span>
+        <span><strong>AstroHealth</strong><small>COMPUTADOR CENTRAL</small></span>
+      </a>
+      <nav id="navigation" aria-label="Navegação principal"></nav>
+      <div class="rail-foot">
+        <div><b>AHCC / 0.5.1</b><small>DEMONSTRADOR LOCAL</small></div>
+      </div>
+    </aside>
+    <div class="main">
+      <header class="top">
+        <div class="breadcrumb"><button id="menu" class="icon-btn" aria-label="Abrir navegação" aria-controls="rail" aria-expanded="false"></button><span>CONTROLE DE MISSÃO</span><span class="slash">/</span><strong id="page-label">Visão geral</strong></div>
+        <div class="top-actions">
+          <span class="top-badge"><i></i><span id="telemetry-badge">DADOS SINTÉTICOS</span></span>
+          <label class="profile-switch"><span class="sr-only">Tripulante</span><span class="avatar" id="top-avatar" aria-hidden="true">LV</span><select id="crew"><option value="A12">Luna Vega · A12</option><option value="B07">Orion Costa · B07</option></select></label>
+        </div>
+      </header>
+      <main id="view" tabindex="-1" aria-busy="true"><p class="panel loading">Carregando o computador central…</p></main>
+      <footer class="footer"><span>ASTROHEALTH · AMBIENTE DE DEMONSTRAÇÃO</span><span>Space Apps Challenge · Projeto educacional</span></footer>
+    </div>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>Ative JavaScript para usar a demonstração interativa.</noscript>
+</body>
+</html>
+
